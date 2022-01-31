@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
       <header class="page-header">      
         <nav class="navigation">
           <a class="logo" href="index.html">
-            <img class="logo-img" alt="Логотип сайта Седона." src="">
+            <img class="logo-img" src="images/logo.svg" width="139" height="70" alt="Логотип сайта Седона.">
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -95,7 +96,9 @@
                   </label>
                 </li>
               </ul>
-              <!-- Проблемный ползунок -->
+            </fieldset> 
+             <!-- Проблемный ползунок -->  
+            <fieldset class="catalog-filter-range">
               <div class="output-area">  
                 <p class="catalog-filter-title">Стоимость, ₽:</p>           
                 0<span class="range-text">от</span><output name="price">9000</output><span class="range-text"> до</span>
@@ -103,9 +106,11 @@
               <label for="hotelprice">
                 <input type="range" id="hotelprice" name="hotelprice" min="0" max="12000" step="100" value="9000">
               </label>
+            </fieldset>
+            <fieldset class="catalog-filter-buttons">
               <button class="button" type="submit">Применить</button>
               <button class="button" type="reset">Сбросить</button>
-            </fieldset>     
+            </fieldset>
           </form>       
         </section>
         <!-- Секция сортировки результатов поиска и изменения типа отображения -->
@@ -116,7 +121,7 @@
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
           </select> 
-          <a href="#" class="button button-greed">
+          <a href="#" class="button button-grid">
             <span class="visually-hidden">Показать сетку</span>
           </a>
           <a class="button button-card" href="#">
@@ -133,7 +138,7 @@
             <li class="hotel-card-item">
               <h2 class="visually-hidden">Карточки отелей</h2>
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="" alt="Гостиница на горе.">
+                <img class="hotel-card-image" src="images/catalog-hotel-1.jpg" width="299" height="206" alt="Гостиница на горе.">
                 <h3 class="hotel-card-title">Amara Resort & Spa</h3>
               </a>
               <span class="hotel-description">Гостиница</span>
@@ -147,7 +152,7 @@
             </li>
             <li class="hotel-card-item">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="" alt="Гостиница на равнине у подножья горы.">
+                <img class="hotel-card-image" src="images/catalog-hotel-2.jpg" width="299" height="206" alt="Гостиница на равнине у подножья горы.">
                 <h3 class="hotel-card-title">Desert Quail Inn</h3>
               </a>
               <span class="hotel-description">Гостиница</span>
@@ -161,7 +166,7 @@
             </li>
             <li class="hotel-card-item">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="" alt="Гостиница на горе Маленький Дьявол.">
+                <img class="hotel-card-image" src="images/catalog-hotel-3.jpg" width="299" height="206" alt="Гостиница на горе Маленький Дьявол.">
                 <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
               </a>
               <span class="hotel-description">Гостиница</span>
@@ -175,7 +180,7 @@
             </li>
             <li class="hotel-card-item">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="" alt="Горная дорога с видом на лес.">
+                <img class="hotel-card-image" src="images/catalog-hotel-4.jpg" width="299" height="206" alt="Горная дорога с видом на лес.">
                 <h3 class="hotel-card-title">GreenTree Inn</h3>
               </a>
               <span class="hotel-description">Гостиница</span>
@@ -262,7 +267,9 @@
         </section>
         <section class="footer-developer">
           <h3 class="visually-hidden">Логотип HTML Academy</h3>
-          <a class="footer-logo" href="https://htmlacademy.ru/study"><img class="footer-logo-img" src="" alt="Логотип HTML Academy."></a>
+          <a class="footer-logo" href="https://htmlacademy.ru/study">
+            <img class="footer-logo-img" src="images/footer-logo.svg" width="115" height="33" alt="Логотип HTML Academy.">
+          </a>
         </section>
       </footer>  
   </body>
