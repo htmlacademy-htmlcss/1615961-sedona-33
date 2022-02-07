@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-      <header class="page-header">      
+      <header class="page-header">
         <nav class="navigation">
           <a class="logo" href="index.html">
             <img class="logo-img" src="images/logo.svg" width="139" height="70" alt="Логотип сайта Седона.">
@@ -22,7 +22,7 @@
               <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
+          <ul class="navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
             </li>
@@ -30,12 +30,12 @@
               <a class="navigation-link" href="#"><span class="visually-hidden">Закладки</span></a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Хочу сюда!</a>
+              <a class="navigation-link navigation-button" href="#">Хочу сюда!</a>
             </li>
           </ul>
-        </nav>    
+        </nav>
       </header>
-      <main class="main-inner">        
+      <main class="main-container main-inner">
         <!-- Секция хлебных крошек + фильтрации жилья по инфраструктуре, типу жилья и стоимости -->
         <section class="hotels-properties">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -73,7 +73,7 @@
                   </label>
                 </li>
               </ul>
-            </fieldset> 
+            </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Тип жилья</legend>
               <ul class="catalog-filter-list">
@@ -96,11 +96,11 @@
                   </label>
                 </li>
               </ul>
-            </fieldset> 
-             <!-- Проблемный ползунок -->  
+            </fieldset>
+           <!-- Проблемный ползунок -->
             <fieldset class="catalog-filter-range">
-              <div class="output-area">  
-                <p class="catalog-filter-title">Стоимость, ₽:</p>           
+              <div class="output-area">
+                <p class="catalog-filter-title">Стоимость, ₽:</p>
                 0<span class="range-text">от</span><output name="price">9000</output><span class="range-text"> до</span>
               </div>
               <label for="hotelprice">
@@ -111,16 +111,16 @@
               <button class="button button-submit" type="submit">Применить</button>
               <button class="button button-reset" type="reset">Сбросить</button>
             </fieldset>
-          </form>       
+          </form>
         </section>
         <!-- Секция сортировки результатов поиска и изменения типа отображения -->
         <section class="inner-results">
           <h2 class="inner-sort-text">Найдено гостиниц: 38</h2>
-          <select class="select-control" aria-label="Сортировка">          
+          <select class="select-control" aria-label="Сортировка">
             <option value="cheap" selected>Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
-          </select> 
+          </select>
           <a href="#" class="button button-grid">
             <span class="visually-hidden">Показать сетку</span>
           </a>
@@ -196,7 +196,7 @@
         </section>
          <!-- Секция с пагинацией -->
          <section class="catalog-pagination">
-           <h3 class="visually-hidden">Выбор страницы из результатов поиска</h3>
+          <h3 class="visually-hidden">Выбор страницы из результатов поиска</h3>
           <ul class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
@@ -216,17 +216,19 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
             </li>
-          </ul> 
-          <p class="inner-page-text">Гостиниц на странице:</p>
-          <select class="select-control">          
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four" selected>4</option>
-            <option value="five">5</option>
-            <option value="six">6</option>
-          </select> 
-         </section> 
+          </ul>
+          <div class="inner-select-control">
+            <p class="inner-page-text">Гостиниц на странице:</p>
+            <select class="select-control-pagination">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+         </section>
          <section class="newsletter-inner">
           <h2 class="newsletter-title newsletter-title-inner">Подпишитесь на рассылку</h2>
           <p class="newsletter-text-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -270,8 +272,7 @@
             <img class="footer-logo-img" src="images/footer-logo.svg" width="115" height="33" alt="Логотип HTML Academy.">
           </a>
         </section>
-      </footer>  
+      </footer>
   </body>
 </html>
-      
-        
+
