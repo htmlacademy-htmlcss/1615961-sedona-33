@@ -314,19 +314,22 @@ body {
 
 .advantages-description {
   display: block;
-  margin-right: 0 auto;
-  margin-left: 0;
+  margin: 30px auto 30px auto;
   max-width: 220px;
 }
 
-.advantages-description:not:last-child {
-  margin-bottom: 30px;
+.advantages-description:last-child {
+  margin-bottom: 0;
 }
 
 .extra-advantages-description {
   display: block;
   color: #333333;
   max-width: 250px;
+}
+
+.advantages-description-no-number {
+  margin-top: 20px;
 }
 
 .advantages-item-background-cold-blue {
