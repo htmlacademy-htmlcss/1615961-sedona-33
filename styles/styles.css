@@ -45,58 +45,6 @@ body {
   overflow: hidden;
 }
 
-.button-submit {
-  box-sizing: border-box;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  text-transform: uppercase;
-  padding-left: 35px;
-  padding-right: 35px;
-  min-width: 160px;
-  max-width: 280px;
-  height: 48px;
-  background: #83B3D3;
-  border-radius: 4px;
-  text-align: center;
-  border: none;
-}
-
-.button-reset {
-  box-sizing: border-box;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-  padding-left: 35px;
-  padding-right: 35px;
-  min-width: 160px;
-  max-width: 280px;
-  height: 23px;
-  background-color: transparent;
-  border: none;
-}
-
-.newsletter-button {
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 320px;
-  margin: 0;
-  padding: 0 35px 0 35px;
-  height: 60px;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-  text-align: center;
-  color: #ffffff;
-  background-color: #83B3D3;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 0px 10px 10px 0px;
-  border: none;
-}
-
 .hotel-card-button {
   display: flex;
   color: #ffffff;
@@ -412,27 +360,53 @@ body {
 }
 
 .newsletter-title {
+  display: block;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #ffffff;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 .newsletter-text {
+  display: block;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
+  margin: 0;
+  margin-bottom: 46px;
 }
 
 .field {
+  box-sizing: border-box;
   font-weight: normal;
   font-size: 18px;
   line-height: 26px;
   width: 600px;
   height: 60px;
   margin: 0;
+}
+
+.newsletter-button {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 320px;
+  margin: 0;
+  padding: 0 35px 0 35px;
+  height: 58px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
 }
 
 .page-footer {
@@ -501,40 +475,109 @@ body {
   background-size: 100% auto;
 }
 
-.catalog-filter {
-  display: flex;
-  width: 1055px;
-  margin: 0 auto 86px auto;
-  justify-content: space-between;
-}
-
-.catalog-filter-buttons {
-  display: flex;
-  flex-direction: column;
-}
-
 .inner-header-title {
+  display: block;
   color: #ffffff;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   max-width: 750px;
-  margin: 35px 0 7px 71px;
+  margin: 35px 0 5px 71px;
 }
 
 .breadcrumbs {
   display: flex;
-  width: 50%;
+  flex-wrap: wrap;
+  max-width: 70%;
   color: #ffffff;
+  padding: 0;
   margin: 0 0 45px 73px;
+  list-style-type: none;
 }
 
 .catalog-filter {
+  display: flex;
+  width: 1056px;
+  margin: 0 auto 73px auto;
+  align-items: flex-start;
   color: #ffffff;
 }
 
+.catalog-filter-group {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.catalog-filter-group-infrastructure {
+  display: block;
+  margin-right: 67px;
+}
+
+.catalog-filter-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .catalog-filter-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+}
+.catalog-filter-list .catalog-filter-item:not(:last-child){
+  margin-bottom: 13px;
+}
+
+.catalog-filter-range {
+  display: block;
+  margin: 0 71px 0 auto;
+  padding: 0;
+  border: none;
+  min-width: 248px;
+}
+
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 0 0;
+  margin: 0;
+  border: none;
+}
+
+.button-submit {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 0 35px 0 35px;
+  margin-bottom: 10px;
+  min-width: 160px;
+  max-width: 240px;
+  min-height: 48px;
+  max-height: 96px;
+  background: #83B3D3;
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+}
+
+.button-reset {
+  display: block;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 10px 35px 10px 35px;
+  min-width: 160px;
+  max-width: 280px;
+  min-height: 23px;
+  max-height: 50px;
+  background-color: transparent;
+  border: none;
 }
 
 .inner-sort-text {
