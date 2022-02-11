@@ -30,7 +30,7 @@
               <a class="navigation-link" href="#"><span class="visually-hidden">Закладки</span></a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-button" href="#">Хочу сюда!</a>
+              <a class="navigation-button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -51,8 +51,8 @@
           </ul>
           <h2 class="visually-hidden">Критерии гостиниц Седоны с фильтрами</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" oninput="price.value=hotelprice.value">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура</legend>
+            <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -75,7 +75,7 @@
               </ul>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья</legend>
+              <legend class="catalog-filter-title">Тип жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -116,12 +116,12 @@
         <!-- Секция сортировки результатов поиска и изменения типа отображения -->
         <section class="inner-results">
           <h2 class="inner-sort-text">Найдено гостиниц: 38</h2>
-          <select class="select-control" aria-label="Сортировка">
+          <select class="sort-select-control" aria-label="Сортировка">
             <option value="cheap" selected>Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
           </select>
-          <a href="#" class="button button-grid">
+          <a class="button button-grid" href="#">
             <span class="visually-hidden">Показать сетку</span>
           </a>
           <a class="button button-card" href="#">
@@ -192,7 +192,9 @@
               </div>
             </li>
           </ul>
-          <button class="button cards-show-more" type="button">Загрузить ещё</button>
+        </section>
+        <section class="wrapper-load-more">
+          <button class="button cards-load-more" type="button">Загрузить ещё</button>
         </section>
          <!-- Секция с пагинацией -->
          <section class="catalog-pagination">
@@ -217,7 +219,7 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
-          <div class="inner-select-control">
+          <div class="wrapper-select-control-pagination">
             <p class="inner-page-text">Гостиниц на странице:</p>
             <select class="select-control-pagination">
               <option value="1">1</option>
@@ -231,7 +233,7 @@
          </section>
          <section class="newsletter-inner">
           <h2 class="newsletter-title newsletter-title-inner">Подпишитесь на рассылку</h2>
-          <p class="newsletter-text-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="newsletter-text newsletter-text-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
             <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
