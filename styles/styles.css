@@ -162,7 +162,7 @@ body {
 
 .main-container {
   width: 1200px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   flex-grow: 1;
 }
 
@@ -197,7 +197,6 @@ body {
   text-transform: uppercase;
   max-width: 720px;
   margin: 0 auto 31px auto;
-  padding: 0;
 }
 
 .main-page-description {
@@ -224,7 +223,6 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin: 0 auto;
-  padding: 0;
   max-width: 180px;
 }
 
@@ -301,22 +299,19 @@ body {
 .extra-advantages-item-home {
   background-image: url("../images/icons/index-advantages-icon-home.svg");
   background-repeat: no-repeat;
-  background-position-x: 163px;
-  background-position-y: 89px;
+  background-position: 163px 89px;
 }
 
 .extra-advantages-item-burger {
   background-image: url("../images/icons/index-advantages-icon-burger.svg");
   background-repeat: no-repeat;
-  background-position-x: 163px;
-  background-position-y: 89px;
+  background-position: 163px 89px;
 }
 
 .extra-advantages-item-souvenir {
   background-image: url("../images/icons/index-advantages-icon-souvenir.svg");
   background-repeat: no-repeat;
-  background-position-x: 163px;
-  background-position-y: 89px;
+  background-position: 163px 89px;
 }
 
 .photo {
@@ -376,7 +371,6 @@ body {
 }
 
 .newsletter-text {
-  display: block;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -388,6 +382,7 @@ body {
 .field {
   box-sizing: border-box;
   font-weight: normal;
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   width: 600px;
@@ -396,19 +391,14 @@ body {
 }
 
 .newsletter-button {
-  box-sizing: border-box;
   min-width: 200px;
-  max-width: 320px;
-  margin: 0;
-  padding: 0 35px 0 35px;
-  height: 58px;
+  padding: 16px 35px 16px 35px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #ffffff;
   background-color: #83B3D3;
-  text-decoration: none;
   text-transform: uppercase;
   border-radius: 0px 10px 10px 0px;
   border: none;
@@ -418,9 +408,9 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  padding: 27px 0 27px 0;
   justify-content: space-between;
   align-items: center;
-  min-height: 120px;
 }
 
 .footer-social {
@@ -437,10 +427,13 @@ body {
 }
 
 .social-item {
-  display: block;
-  min-width: 30px;
-  min-height: 30px;
   margin-right: 20px;
+}
+
+.social-link {
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 .social-item:last-child {
@@ -554,34 +547,30 @@ body {
   display: block;
   box-sizing: border-box;
   color: #ffffff;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
-  padding: 0 35px 0 35px;
+  padding: 14px 35px 13px 35px;
   margin-bottom: 10px;
   min-width: 160px;
-  max-width: 240px;
-  min-height: 48px;
-  max-height: 96px;
   background: #83B3D3;
   border-radius: 4px;
   border: none;
-  align-items: center;
 }
 
 .button-reset {
   display: block;
   box-sizing: border-box;
   color: #ffffff;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   padding: 10px 35px 10px 35px;
   min-width: 160px;
-  max-width: 280px;
   min-height: 23px;
-  max-height: 50px;
   background-color: transparent;
   border: none;
 }
@@ -606,6 +595,7 @@ body {
 
   .sort-select-control {
   color: #333333;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -673,16 +663,13 @@ body {
 
 .cards-load-more {
   display: block;
-  max-width: 700px;
   min-width: 620px;
-  min-height: 60px;
-  max-height: 120px;
-  padding: 0 50px 0 50px;
+  padding: 17px 50px 17px 50px;
   color: #ffffff;
+  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  text-decoration: none;
   text-transform: uppercase;
   background: #83B3D3;
   border-radius: 4px;
@@ -753,6 +740,10 @@ body {
   margin-bottom: auto;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
 }
 
 .inner-page-text {
