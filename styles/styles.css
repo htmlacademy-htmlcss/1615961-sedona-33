@@ -131,6 +131,7 @@ body {
   padding: 0;
   list-style-type: none;
   align-items: stretch;
+  background-color: #ffffff;
 }
 
 .navigation-item {
@@ -175,11 +176,12 @@ body {
   display: block;
   box-sizing: border-box;
   color: #000000;
-  margin: 0;
+  margin: 13px 0 0 0;
   padding: 0;
-  width: 20px;
-  height: 19px;
+  width: 42px;
+  height: 42px;
   text-decoration: none;
+  position: relative;
 }
 
 .navigation-user-link:hover {
@@ -190,24 +192,24 @@ body {
   color: rgba(117, 98, 87, 0.3);
 }
 
-.navigation-user .navigation-item:first-child {
-  margin-right: 23px;
-}
-
 .navigation-user .navigation-item:nth-child(2) {
-  margin-right: 31px;
+  margin-right: 20px;
 }
 
 .logo-search {
   display: block;
   position: relative;
-  top: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .logo-favorite {
   display: block;
   position: relative;
-  top: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .icon-green-circle {
@@ -220,10 +222,9 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
-  position: relative;
-  top: -2px;
-  left: 13px;
-
+  position: absolute;
+  top: 2px;
+  left: 23px;
 }
 
 .navigation-button {
@@ -510,7 +511,7 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  padding: 25px 0 25px 0;
+  padding: 15px 0 15px 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -528,18 +529,18 @@ body {
   padding: 0;
   margin-top: 25px;
   margin-bottom: 25px;
-
 }
 
 .social-item {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .social-link {
   display: block;
-  min-width: 30px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   color: #83B3D3;
+  position: relative;
 }
 
 .social-link:hover {
@@ -557,7 +558,7 @@ body {
 
 .logo-fb {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -565,7 +566,7 @@ body {
 
 .logo-youtube {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -573,7 +574,7 @@ body {
 
 .logo-twitter {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -612,7 +613,7 @@ body {
 .footer-logo {
   color: #000000;
   display: block;
-  min-width: 125px;
+  width: 125px;
   padding: 10px;
 }
 
