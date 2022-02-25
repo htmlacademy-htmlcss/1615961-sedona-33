@@ -56,9 +56,10 @@ body {
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 37px;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   justify-content: center;
   align-items: center;
   height: 37px;
@@ -69,20 +70,72 @@ body {
 }
 
 .hotel-card-button-more {
-  background: #756257;
+  background-color: #756257;
   padding-left: 10px;
   padding-right: 10px;
   max-width: 133px;
 }
 
+.hotel-card-button-more:focus {
+  background-color: #615048;
+  outline: 3px solid #83b3d3;
+  outline-offset: -1px;
+}
+
+.hotel-card-button-more:hover {
+  background-color: #615048;
+}
+
+.hotel-card-button-more:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
 .hotel-card-button-favorite {
-  background: #83B3D3;
+  background-color: #83B3D3;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.current-button {
-  background: #7DB54F;
+.hotel-card-button-favorite:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+  outline-offset: -1px;
+}
+
+.hotel-card-button-favorite:hover {
+  background-color: #68A2CA;
+  border: 1px solid #756257;
+}
+
+.hotel-card-button-favorite:active {
+  background-color: #68A2CA;
+  border: 1px solid #756257;
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.hotel-card-button-favorite-in {
+  background-color: #7DB54F;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.hotel-card-button-favorite-in:focus {
+  background-color: #6C9E42;
+  outline: 3px solid #756257;
+  outline-offset: -1px;
+}
+
+.hotel-card-button-favorite-in:hover {
+  background-color: #6C9E42;
+}
+
+.hotel-card-button-favorite-in:active {
+  background-color: #6C9E42;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .page-header {
@@ -245,6 +298,12 @@ body {
   margin-top: 14px;
 }
 
+.navigation-button:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -1px;
+  background-color: #615048;
+}
+
 .navigation-button:hover {
   background-color: #615048;
 }
@@ -252,6 +311,7 @@ body {
 .navigation-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #615048;
+  outline: none;
 }
 
 .main-container {
@@ -442,6 +502,12 @@ body {
   border-radius: 10px;
 }
 
+.hotel-search:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -1px;
+  background-color: #615048;
+}
+
 .hotel-search:hover {
   background-color: #615048;
 }
@@ -449,6 +515,7 @@ body {
 .hotel-search:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #615048;
+  outline: none;
 }
 
 .newsletter {
@@ -541,6 +608,12 @@ body {
   height: 40px;
   color: #83B3D3;
   position: relative;
+  border-radius: 10px;
+}
+
+.social-link:focus {
+  color: #68A2CA;
+  outline: 3px solid #83B3D3;
 }
 
 .social-link:hover {
@@ -582,7 +655,7 @@ body {
 
 .footer-phone-number {
   display: block;
-  min-width: 400px;
+  min-width: 360px;
   max-width: 720px;
   font-weight: 400;
   font-size: 40px;
@@ -592,10 +665,17 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 15px 0 15px 0;
+  border-radius: 10px;
+}
+
+.footer-phone-number:focus {
+  color: #756257;
+  outline:  3px solid #83B3D3;
 }
 
 .footer-phone-number:hover {
   color: #756257;
+  outline: none;
 }
 
 .footer-phone-number:active {
@@ -615,10 +695,17 @@ body {
   display: block;
   width: 125px;
   padding: 10px;
+  border-radius: 10px;
+}
+
+.footer-logo:focus {
+  color: #756257;
+  outline:  3px solid #83B3D3;
 }
 
 .footer-logo:hover {
   color: #756257;
+  outline: none;
 }
 
 .footer-logo:active {
@@ -689,6 +776,7 @@ body {
   padding: 0;
   list-style-type: none;
 }
+
 .catalog-filter-list .catalog-filter-item:not(:last-child){
   margin-bottom: 13px;
 }
@@ -773,6 +861,96 @@ body {
   border-radius: 4px;
 }
 
+.button-grid {
+  display: block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  color: #000000;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.icon-show-grid {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.button-grid:focus {
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.button-grid:hover {
+  border: 2px solid #83B3D3;
+}
+
+.button-card {
+  display: block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  color: #000000;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.icon-show-card {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.button-card:focus {
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.button-card:hover {
+  border: 2px solid #83B3D3;
+}
+
+.button-list {
+  display: block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  color: #000000;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.icon-show-list {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.button-list:focus {
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.button-list:hover {
+  border: 2px solid #83B3D3;
+}
+
+.button-current {
+  border: 2px solid #000000;
+}
+
 .hotel-card-list {
   display: flex;
   flex-wrap: wrap;
@@ -812,6 +990,23 @@ body {
   margin-bottom: 16px;
 }
 
+.hotel-card-link:focus {
+  outline: none;
+}
+
+.hotel-card-link:focus .hotel-card-image {
+  outline: 3px solid #83B3D3;
+}
+
+.hotel-card-link:hover .hotel-card-image {
+  opacity: 0.6;
+  outline: none;
+}
+
+.hotel-card-link:active .hotel-card-image {
+  opacity: 0.3;
+}
+
 .hotel-card-title {
   font-weight: 700;
   font-size: 24px;
@@ -833,6 +1028,19 @@ body {
   margin-bottom: 16px;
 }
 
+.wrapper-hotel-rating {
+  display: flex;
+}
+
+.icon-star {
+  display: block;
+  width: 25px;
+  height: 17px;
+  background-image: url('../images/icons/star.svg');
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
 .hotel-rating {
   box-sizing: border-box;
   color: #333333;
@@ -841,7 +1049,8 @@ body {
   line-height: 21px;
   margin: 0;
   background-color: #f2f2f2;
-  max-width: 160px;
+  min-width: 160px;
+  max-width: 180px;
   margin-left: auto;
   padding: 8px 0 8px 0;
   border-radius: 4px;
@@ -851,23 +1060,65 @@ body {
 
 .wrapper-load-more {
   padding: 30px 0 30px 0;
+  position: relative;
+}
+
+.load-more-line::before {
+  content:'';
+  position: absolute;
+  width: 1055px;
+  left: 73px;
+  right: 72px;
+  top: 120px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.load-more-line::after {
+  content:'';
+  position: absolute;
+  width: 1055px;
+  left: 73px;
+  right: 72px;
+  top: 0;
+  border-top: 1px solid #e6e6e6;
 }
 
 .cards-load-more {
   display: block;
-  min-width: 620px;
-  padding: 17px 50px 17px 50px;
-  color: #ffffff;
+  box-sizing: border-box;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
-  background: #83B3D3;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+  max-width: 620px;
+  min-height: 60px;
+  text-align: center;
+  padding: 17px 50px 17px 50px;
   border-radius: 4px;
   margin: 0 auto;
-  box-sizing: border-box;
-  border: none;
+  border: 1px solid #83B3D3;
+}
+
+.cards-load-more:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+  outline-offset: -1px;
+}
+
+.cards-load-more:hover {
+  background-color: #68A2CA;
+  border: 1px solid #756257;
+}
+
+.cards-load-more:active {
+  background-color: #68A2CA;
+  border: 1px solid #756257;
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .catalog-pagination {
@@ -900,7 +1151,7 @@ body {
   width: 55px;
   height: 55px;
   color: #ffffff;
-  background: #83B3D3;
+  background-color: #83B3D3;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -913,6 +1164,22 @@ body {
 .pagination-current {
   background: #F2F2F2;
   color: #000000;
+}
+
+.pagination-item:not(:first-child) .pagination-link:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+  outline-offset: -1px;
+}
+
+.pagination-item:not(:first-child) .pagination-link:hover {
+  background-color: #68a2ca;
+}
+
+.pagination-item:not(:first-child) .pagination-link:active {
+  background-color: #68a2ca;
+  color:rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .wrapper-select-control-pagination {
