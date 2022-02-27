@@ -124,7 +124,7 @@
           <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
-            <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <input class="newsletter-field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button" type="submit">
               Подписаться
             </button>
@@ -174,5 +174,45 @@
           </a>
         </section>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-search">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <div class="arriving-departure-forms">
+              <h2 class="visually-hidden">Форма поиска</h2>
+              <p class="modal-text">Дата заезда:</p>
+              <form class="date-arriving-form" action="https://echo.htmlacademy.ru/" method="get">
+                <p class="field-group">
+                  <label class="visually-hidden" for="arriving">Дата заезда</label>
+                  <input class="arriving-field" type="date" id="arriving" name="arriving-data" placeholder="">
+                </p>
+              </form>
+              <p class="modal-warning">Мы не можем отправить вас в прошлое.</p>
+              <p class="modal-text">Дата выезда:</p>
+              <form class="date-departure-form" action="https://echo.htmlacademy.ru/" method="get">
+                <p class="field-group">
+                  <label class="visually-hidden" for="departure">Дата выезда</label>
+                  <input class="departure-field" type="date" id="departure" name="departure-data" placeholder="">
+                </p>
+              </form>
+              <p class="modal-comment">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+            <div class="wrapper-counter-adult-child">
+              <div class="modal-adult">
+                <p class="modal-text">Взрослые:</p>
+              </div>
+              <div class="modal-child">
+                <p class="modal-text">Дети:</p>
+              </div>
+            </div>
+            <a class="modal-find" href="#">
+              Найти
+            </a>
+          </section>
+        </div>
+      </div>
   </body>
 </html>
