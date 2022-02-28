@@ -1006,7 +1006,7 @@ body {
 .catalog-filter {
   display: flex;
   width: 1056px;
-  margin: 0 auto 73px auto;
+  margin: 0 auto 69px auto;
   align-items: flex-start;
   color: #ffffff;
 }
@@ -1043,13 +1043,135 @@ body {
   margin: 0 71px 0 auto;
   padding: 0;
   border: none;
-  min-width: 248px;
+  min-width: 287px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+}
+
+.range-wrapper-input-from {
+  position: relative;
+}
+
+.range-wrapper-input-to {
+  position: relative;
+  left: -2px;
+}
+
+.range-input {
+  border: none;
+  width: 144px;
+  height: 48px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  font-family: "PT Sans" sans-serif;
+  padding: 14px 41px 11px 19px;
+}
+
+.range-input-from {
+  border: 2px solid #FFFFFF;
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-to {
+  border: 2px solid #FFFFFF;
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+/* Почему-то не работает */
+.range-input-from:hover ~ .range-input-to {
+  border-left: 2px solid transparent;
+}
+
+ .range-input:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 0px 3px #81B3D2;
+  outline: 3px solid #81B3D2;
+  border: 2px solid #FFFFFF;
+}
+
+.range-input:active {
+  background-color: #756257;
+  outline: none;
+  box-shadow: none;
+}
+
+.range-text {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  left: 112px;
+  top: 12px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  width: 287px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
 }
 
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
-  padding: 50px 0 0 0;
+  padding: 54px 0 0 0;
   margin: 0;
   border: none;
 }
