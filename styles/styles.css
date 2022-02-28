@@ -1026,6 +1026,9 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .catalog-filter-list {
@@ -1036,6 +1039,91 @@ body {
 
 .catalog-filter-list .catalog-filter-item:not(:last-child){
   margin-bottom: 13px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+  cursor: pointer;
+}
+
+.control-mark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+}
+
+.control-checkbox[type="checkbox"]:checked + .control-mark::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url('../images/icons/check-mark-filter.svg');
+  background-position: 50% 6px;
+  background-repeat: no-repeat;
+}
+
+.control-checkbox:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-checkbox:disabled + .control-mark {
+  background-color: #646363;
+}
+
+.control-radio-mark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+}
+
+.control-radio[type="radio"]:checked + .control-radio-mark::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.control-radio:focus + .control-radio-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.control:hover .control-radio-mark {
+  background-color: #ffffff;
+  outline: none;
+}
+
+.catalog-filter-options {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .catalog-filter-range {
