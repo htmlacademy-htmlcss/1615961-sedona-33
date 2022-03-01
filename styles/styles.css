@@ -784,9 +784,9 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   box-sizing: border-box;
@@ -817,6 +817,22 @@ body {
   background-position: center;
   cursor: pointer;
 }
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 0.6;
+  outline: none;
+}
+
 
 .modal-title {
   display: block;
@@ -850,8 +866,52 @@ body {
   margin: 0;
 }
 
+.field-group {
+  position: relative;
+}
+
 .arriving-field {
+  box-sizing: border-box;
   width: 100%;
+  height: 50px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  padding: 5px 40px 6px 19px;
+  color: #000000;
+  font-family: "PT Sans" sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.arriving-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.arriving-field:hover {
+  background-color: #E6E6E6;
+  outline: none;
+}
+
+.arriving-field:active {
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+}
+
+.calendar-icon {
+  background: url('../images/icons/calendar.svg');
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 19px;
+  top: 18px;
 }
 
 .modal-warning {
@@ -868,9 +928,32 @@ body {
 .departure-field {
   box-sizing: border-box;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  height: 50px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
   border: none;
+  padding: 5px 40px 6px 19px;
+  color: #000000;
+  font-family: "PT Sans" sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.departure-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.departure-field:hover {
+  background-color: #E6E6E6;
+  outline: none;
+}
+
+.departure-field:active {
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
 }
 
 .modal-comment {
@@ -890,12 +973,149 @@ body {
 }
 
 .modal-adult {
-  width: 288px;
+  width: 155px;
+}
+
+.counter-adult {
+  width: 133px;
+  height: 50px;
   margin-right: 56px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+
+.counter-minus {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 15px;
+  left: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  color: #000000;
+}
+
+.icon-minus {
+  display: block;
+  margin-left: 3px;
+  opacity: 0.3;
+}
+
+.counter-plus {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 15px;
+  right: 15px;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  color: #000000;
+}
+
+.icon-plus {
+  display: block;
+  margin-left: 3px;
+  opacity: 0.3;
+}
+
+.counter-minus:focus,
+.counter-plus:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.counter-minus:focus > .icon-minus,
+.counter-plus:focus > .icon-plus {
+  opacity: 1;
+}
+
+.counter-minus:hover > .icon-minus,
+.counter-plus:hover > .icon-plus {
+  opacity: 1;
+  outline: none;
+}
+
+.counter-minus:active,
+.counter-plus:active {
+  outline: none;
+}
+
+.counter-minus:active > .icon-minus,
+.counter-plus:active > .icon-plus {
+  opacity: 0.2;
+  outline: none;
 }
 
 .modal-child {
-  width: 230px;
+  width: 97px;
+  position: relative;
+}
+
+.counter-child {
+  width: 133px;
+  height: 50px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-information {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  left: 54px;
+}
+
+.modal-information:hover {
+  background-color: #68a2ca;
+}
+
+.modal-information-text {
+  font-size: 11px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.modal-information-triangle {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background-color: #333333;
+  top: -6px;
+  left: 120px;
+  transform: rotate(45deg);
+}
+
+.modal-information-description {
+  position: absolute;
+  box-sizing: border-box;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  left: -61px;
+  top: 54px;
+}
+
+/* .modal-information-description-close {
+  display: none;
+} */
+
+.modal-information-text-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 }
 
 .modal-find {

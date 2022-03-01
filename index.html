@@ -185,18 +185,20 @@
               <h2 class="visually-hidden">Форма поиска</h2>
               <p class="modal-text">Дата заезда:</p>
               <form class="date-arriving-form" action="https://echo.htmlacademy.ru/" method="get">
-                <p class="field-group">
+                <div class="field-group">
                   <label class="visually-hidden" for="arriving">Дата заезда</label>
-                  <input class="arriving-field" type="date" id="arriving" name="arriving-data" placeholder="">
-                </p>
+                  <input class="arriving-field" type="text" id="arriving" name="arriving-data" value="27 апреля 2020" placeholder="">
+                  <div class="calendar-icon"></div>
+                </div>
               </form>
               <p class="modal-warning">Мы не можем отправить вас в прошлое.</p>
               <p class="modal-text">Дата выезда:</p>
               <form class="date-departure-form" action="https://echo.htmlacademy.ru/" method="get">
-                <p class="field-group">
+                <div class="field-group">
                   <label class="visually-hidden" for="departure">Дата выезда</label>
-                  <input class="departure-field" type="date" id="departure" name="departure-data" placeholder="">
-                </p>
+                  <input class="departure-field" type="text" id="departure" name="departure-data" value="1 сентября 2021" placeholder="">
+                  <div class="calendar-icon"></div>
+                </div>
               </form>
               <p class="modal-comment">На эти даты есть свободные номера. Пока есть.</p>
             </div>
@@ -204,8 +206,41 @@
               <div class="modal-adult">
                 <p class="modal-text">Взрослые:</p>
               </div>
+              <div class="counter-adult">
+                <button class="counter-minus" type="button">
+                  <svg class="icon-minus" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="1" d="M0 0L0 1L13 1V0L0 0Z" />
+                  </svg>
+                </button>
+                <p class="modal-text">2</p>
+                <button class="counter-plus" type="button">
+                  <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="1" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
+                  </svg>
+                </button>
+              </div>
               <div class="modal-child">
                 <p class="modal-text">Дети:</p>
+                <div class="modal-information">
+                  <span class="modal-information-text">i</span>
+                </div>
+                <div class="modal-information-description modal-information-description-close">
+                  <div class="modal-information-triangle"></div>
+                  <span class="modal-information-text-description">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.Дети до 6 лет размещаются бесплатно.</span>
+                </div>
+              </div>
+              <div class="counter-child">
+                <button class="counter-minus" type="button">
+                  <svg class="icon-minus" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="1" d="M0 0L0 1L13 1V0L0 0Z" />
+                  </svg>
+                </button>
+                <p class="modal-text">1</p>
+                <button class="counter-plus" type="button">
+                  <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="1" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
+                  </svg>
+                </button>
               </div>
             </div>
             <a class="modal-find" href="#">
