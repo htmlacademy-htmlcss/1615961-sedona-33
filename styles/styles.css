@@ -784,9 +784,9 @@ body {
   z-index: 2;
 }
 
- /* .modal-container-close {
+ .modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   box-sizing: border-box;
