@@ -592,16 +592,15 @@ body {
   outline: none;
 }
 
-/*Всегда при фокусе выделен инвалидным, как исправить?*/
-.newsletter-field:focus:invalid {
-  background-color: #ffffff;
-  outline: 2px solid #FF5757;
-  outline-offset: -2px;
-}
-
 .newsletter-field:focus {
   background-color: #e6e6e6;
   outline: 3px solid #83B3D3;
+}
+
+.field-error {
+  background-color: #ffffff;
+  outline: 2px solid #FF5757;
+  outline-offset: -2px;
 }
 
 .newsletter-button {
@@ -784,10 +783,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 2;
 }
-/*Закомментировать, чтобы увидеть модальное окно*/
-.modal-container-close {
+
+ /* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   box-sizing: border-box;
@@ -849,18 +848,17 @@ body {
   text-transform: uppercase;
 }
 
-.arriving-departure-forms {
+.wrapper-modal-form {
   display: grid;
   grid-template-columns: 155px 420px;
   grid-template-rows: 50px 40px 50px 40px;
 }
 
-.date-arriving-form {
+.search-form {
   grid-column: 2/-1;
 }
 
 .modal-text {
-  display: block;
   font-size: 18px;
   line-height: 50px;
   font-weight: 700;
@@ -871,7 +869,7 @@ body {
   position: relative;
 }
 
-.arriving-field {
+.text-field {
   box-sizing: border-box;
   width: 100%;
   height: 50px;
@@ -886,33 +884,28 @@ body {
   line-height: 40px;
 }
 
-input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-.arriving-field:focus {
+.text-field:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
 
-.arriving-field:hover {
+.text-field:hover {
   background-color: #E6E6E6;
   outline: none;
 }
 
-.arriving-field:active {
+.text-field:active {
   background-color: #FFFFFF;
   outline: 2px solid #000000;
   outline-offset: -2px;
 }
 
 .calendar-icon {
-  background: url('../images/icons/calendar.svg');
-  width: 15px;
-  height: 15px;
   position: absolute;
   right: 19px;
   top: 18px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-warning {
@@ -926,37 +919,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #FF5757;
 }
 
-.departure-field {
-  box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  background-color: #F2F2F2;
-  border-radius: 4px;
-  border: none;
-  padding: 5px 40px 6px 19px;
-  color: #000000;
-  font-family: "PT Sans" sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 40px;
-}
-
-.departure-field:focus {
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
-}
-
-.departure-field:hover {
-  background-color: #E6E6E6;
-  outline: none;
-}
-
-.departure-field:active {
-  background-color: #FFFFFF;
-  outline: 2px solid #000000;
-  outline-offset: -2px;
-}
-
 .modal-comment {
   display: block;
   grid-column: 2/-1;
@@ -968,9 +930,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #333333;
 }
 
-.wrapper-counter-adult-child {
+.wrapper-modal-counters {
   display: flex;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .modal-adult {
@@ -997,6 +960,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   padding: 0;
   color: #000000;
+  cursor: pointer;
 }
 
 .icon-minus {
@@ -1015,6 +979,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   padding: 0;
   color: #000000;
+  cursor: pointer;
 }
 
 .icon-plus {
@@ -1050,9 +1015,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
+.modal-input {
+  border: none;
+  background-color: #F2F2F2;
+  width: 40px;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 700;
+  font-family: "PT Sans" sans-serif;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.modal-input:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 5px;
+  outline-offset: -3px;
+}
+
 .modal-child {
   width: 97px;
-  position: relative;
 }
 
 .counter-child {
@@ -1073,7 +1055,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: absolute;
   text-align: center;
   top: 14px;
-  left: 54px;
+  left: 398px;
 }
 
 .modal-information:hover {
@@ -1086,17 +1068,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #ffffff;
 }
 
-.modal-information-triangle {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  background-color: #333333;
-  top: -6px;
-  left: 120px;
-  transform: rotate(45deg);
-}
-
 .modal-information-description {
+  display: none;
   position: absolute;
   box-sizing: border-box;
   width: 256px;
@@ -1104,19 +1077,30 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #333333;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  left: -61px;
+  left: 283px;
   top: 54px;
 }
 
-/* .modal-information-description-close {
-  display: none;
-} */
+.modal-information:hover + .modal-information-description {
+  display: block;
+}
 
 .modal-information-text-description {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+}
+
+.modal-information-text-description::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background-color: #333333;
+  top: -6px;
+  left: 120px;
+  transform: rotate(45deg);
 }
 
 .modal-find {
@@ -1129,11 +1113,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #83B3D3;
-  text-decoration: none;
-  max-width: 620px;
+  min-width: 575px;
   min-height: 60px;
   text-align: center;
   padding: 17px 50px 17px 50px;
+  border: none;
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -1154,8 +1138,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
-
-/* Catalog */
 
 .hotels-properties {
   display: flex;
@@ -1184,16 +1166,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   max-width: 70%;
   color: #ffffff;
   padding: 0;
-  margin: 0 0 45px 68px;
+  margin: 0 0 45px 70px;
   list-style-type: none;
-}
-
-.breadcrumbs-item {
   position: relative;
 }
 
+.breadcrumbs-item:first-child:after {
+  content:'';
+  width: 10px;
+  height: 10px;
+  background-image: url('../images/icons/breadcrumbs-arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+  opacity: 0.3;
+}
+
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 22px;
+  margin-right: 21px;
 }
 
 .breadcrumbs-link {
@@ -1204,6 +1196,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 21px;
   font-weight: 400;
   border-radius: 4px;
+  padding: 0px 3px 0px 3px;
 }
 
 .breadcrumbs-link:focus {
@@ -1217,26 +1210,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .breadcrumbs-link:active {
   outline: none;
-  opacity: 0.3;
-}
-
-.icon-home {
-  width: 22px;
-  height: 21px;
-  background-image: url('../images/icons/breadcrumbs-icon-home.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon-arrow {
-  width: 10px;
-  height: 10px;
-  background-image: url('../images/icons/breadcrumbs-arrow.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 27px;
-  bottom: 5px;
   opacity: 0.3;
 }
 
@@ -1296,7 +1269,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   left: 0px;
 }
 
-.control-checkbox[type="checkbox"]:checked + .control-mark::after {
+.control-checkbox:checked + .control-mark::after {
   content: '';
   width: 20px;
   height: 20px;
@@ -1335,7 +1308,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   left: 0px;
 }
 
-.control-radio[type="radio"]:checked + .control-radio-mark::after {
+.control-radio:checked + .control-radio-mark::after {
   content: '';
   display: block;
   width: 10px;
@@ -1357,7 +1330,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.catalog-filter-options {
+.control-text {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -1383,15 +1356,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   box-sizing: border-box;
 }
 
-.range-wrapper-input-from {
-  position: relative;
-}
-
-.range-wrapper-input-to {
-  position: relative;
-  left: -2px;
-}
-
 .range-input {
   border: none;
   width: 144px;
@@ -1408,25 +1372,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .range-input-from {
   border: 2px solid #FFFFFF;
+  border-right: 2px solid transparent;
   border-radius: 4px 0 0 4px;
 }
 
 .range-input-to {
   border: 2px solid #FFFFFF;
   border-radius: 0 4px 4px 0;
+  position: relative;
+  left: -2px;
 }
 
 .range-input:hover{
   border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-/* Не могу понять, почему не работает */
 .range-input-from:hover ~ .range-input-to {
-  border-left: 2px solid transparent;
+ border-left: 2px solid transparent;
 }
 
  .range-input:focus {
-  outline: none;
   box-shadow: inset 0px 0px 0px 3px #81B3D2;
   outline: 3px solid #81B3D2;
   border: 2px solid #FFFFFF;
@@ -1849,14 +1814,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #83B3D3;
-  text-decoration: none;
-  max-width: 620px;
-  min-height: 60px;
+  width: 620px;
   text-align: center;
   padding: 17px 50px 17px 50px;
   border-radius: 4px;
   margin: 0 auto;
   border: 1px solid #83B3D3;
+  cursor: pointer;
 }
 
 .cards-load-more:focus {

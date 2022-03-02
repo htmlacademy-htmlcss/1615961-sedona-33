@@ -54,10 +54,11 @@
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
-                <div class="icon-home"></div>
+                <svg width="12" height="12" aria-hidden="true" focusable="false" viewbox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/>
+                </svg>
                 <span class="visually-hidden">Главная</span>
               </a>
-              <div class="icon-arrow"></div>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
@@ -72,21 +73,21 @@
                   <label class="control">
                     <input class="control-checkbox visually-hidden" type="checkbox" name="swimmingpool" checked>
                     <span class="control-mark"></span>
-                    <span class="catalog-filter-options">Бассейн</span>
+                    <span class="control-text">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-checkbox visually-hidden" type="checkbox" name="parking" checked>
                     <span class="control-mark"></span>
-                    <span class="catalog-filter-options">Парковка</span>
+                    <span class="control-text">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-checkbox visually-hidden" type="checkbox" name="wi-fi">
                     <span class="control-mark"></span>
-                    <span class="catalog-filter-options">Wi-Fi</span>
+                    <span class="control-text">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
@@ -98,21 +99,21 @@
                   <label class="control">
                     <input class="control-radio visually-hidden" type="radio" name="hotel-type" value="hotel" checked>
                     <span class="control-radio-mark"></span>
-                    <span class="catalog-filter-options">Гостиница</span>
+                    <span class="control-text">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-radio visually-hidden" type="radio" name="hotel-type" value="motel">
                     <span class="control-radio-mark"></span>
-                    <span class="catalog-filter-options">Мотель</span>
+                    <span class="control-text">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-radio visually-hidden" type="radio" name="hotel-type" value="apartament">
                     <span class="control-radio-mark"></span>
-                    <span class="catalog-filter-options">Апартаменты</span>
+                    <span class="control-text">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -121,18 +122,12 @@
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="range">
                 <div class="range-wrapper-inputs">
-                  <div class="range-wrapper-input-from">
-                    <label class="catalog-filter-label">
-                      <input class="range-input range-input-from" type="number" value="0" name="min-price">
-                      <span class="range-text">от</span>
-                    </label>
-                  </div>
-                  <div class="range-wrapper-input-to">
-                    <label class="catalog-filter-label">
-                      <input class="range-input range-input-to" type="number" value="9000" name="max-price">
-                      <span class="range-text">до</span>
-                    </label>
-                  </div>
+                  <label class="catalog-filter-label" for="min-price"></label>
+                  <input class="range-input range-input-from" type="number" value="0" name="min-price" id="min-price">
+                  <span class="range-text">от</span>
+                  <label class="catalog-filter-label" for="max-price"></label>
+                  <input class="range-input range-input-to" type="number" value="9000" name="max-price" id="max-price">
+                  <span class="range-text">до</span>
                 </div>
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0px; width: 227px">
@@ -262,15 +257,15 @@
         </section>
         <section class="wrapper-load-more">
           <div class="load-more-line">
-            <a class="cards-load-more" href="#">Загрузить ещё</a>
+            <button class="cards-load-more" type="button" href="#">Загрузить ещё</button>
           </div>
         </section>
          <!-- Секция с пагинацией -->
-         <section class="catalog-pagination">
+        <section class="catalog-pagination">
           <h3 class="visually-hidden">Выбор страницы из результатов поиска</h3>
           <ul class="pagination">
             <li class="pagination-item">
-              <a class="pagination-link-current" onclick="return false" href="#">1</a>
+              <a class="pagination-link-current">1</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">2</a>
@@ -299,8 +294,8 @@
               <option value="6">6</option>
             </select>
           </div>
-         </section>
-         <section class="newsletter-inner">
+        </section>
+        <section class="newsletter-inner">
           <h2 class="newsletter-title newsletter-title-inner">Подпишитесь на рассылку</h2>
           <p class="newsletter-text newsletter-text-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
