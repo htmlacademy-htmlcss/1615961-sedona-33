@@ -349,6 +349,7 @@ body {
 .welcome-img-background::after {
   content: '';
   position: absolute;
+  display: block;
   width: 100%;
   height: 57px;
   background-image: url('../images/index-white-arrow-background.svg');
@@ -859,17 +860,14 @@ body {
   text-transform: uppercase;
 }
 
-.wrapper-modal-form {
+.search-form {
   display: grid;
   grid-template-columns: 155px 420px;
   grid-template-rows: 50px 40px 50px 40px;
 }
 
-.search-form {
-  grid-column: 2/-1;
-}
-
 .modal-text {
+  grid-column: 1/2;
   font-size: 18px;
   line-height: 50px;
   font-weight: 700;
@@ -877,6 +875,7 @@ body {
 }
 
 .field-group {
+  grid-column: 2/-1;
   position: relative;
 }
 
@@ -911,13 +910,28 @@ body {
   outline-offset: -2px;
 }
 
-.calendar-icon {
+.calendar-button {
   position: absolute;
   right: 19px;
   top: 18px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.3);
   border: none;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.calendar-button:hover {
+  color: #000000;
+}
+
+.calendar-button:focus {
+  color: #000000;
+  outline: 2px solid #83b3d3;
+}
+
+.calendar-button:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-warning {
@@ -943,6 +957,7 @@ body {
 }
 
 .wrapper-modal-counters {
+  grid-column: 1/-1;
   display: flex;
   margin-bottom: 40px;
   position: relative;
@@ -1117,6 +1132,7 @@ body {
 
 .modal-find {
   display: block;
+  grid-column: 1/-1;
   box-sizing: border-box;
   font-family: inherit;
   font-weight: 700;
@@ -1420,9 +1436,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
  .range-input:focus {
+  border: 2px solid #ffffff;
   box-shadow: inset 0px 0px 0px 3px #81B3D2;
   outline: 3px solid #81B3D2;
-  border: 2px solid #FFFFFF;
 }
 
 .range-input:active {
