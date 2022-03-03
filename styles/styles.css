@@ -1611,6 +1611,11 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   padding-left: 19px;
   padding-right: 35px;
+  -webkit-appearance: none;
+  overflow: hidden;
+  background-image: url('../images/icons/filter-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 254px center;
 }
 
 .sort-select-control:focus {
@@ -1979,6 +1984,11 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   padding-left: 17px;
   padding-right: 35px;
+  -webkit-appearance: none;
+  overflow: hidden;
+  background-image: url('../images/icons/filter-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 127px center;
 }
 
 .select-control-pagination:focus {
