@@ -608,6 +608,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.newsletter-field:disabled {
+  background-color: #9c9b9b;
+}
+
 .newsletter-field:hover {
   background-color: #e6e6e6;
   outline: none;
@@ -905,6 +909,10 @@ body {
   line-height: 40px;
 }
 
+.text-field:disabled {
+  background-color: #9c9b9b;
+}
+
 .text-field:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
@@ -1065,6 +1073,10 @@ body {
   font-family: "PT Sans" sans-serif;
   padding: 0 5px;
   text-align: center;
+}
+
+.modal-input:disabled {
+  background-color: #9c9b9b;
 }
 
 .modal-input:focus {
@@ -1425,6 +1437,10 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
   font-family: "PT Sans" sans-serif;
   padding: 14px 41px 11px 19px;
+}
+
+.range-input:disabled {
+  background-color: #9c9b9b;
 }
 
 .range-input-from {
