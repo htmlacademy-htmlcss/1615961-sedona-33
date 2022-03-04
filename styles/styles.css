@@ -29,7 +29,13 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  min-width: 1200px;
   min-height: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -164,6 +170,7 @@ body {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   width: 1200px;
   margin: 0 auto;
   padding: 0 70px 0 70px;
@@ -194,6 +201,7 @@ body {
 
 .navigation-item {
   position: relative;
+  max-width: 180px;
 }
 
 .navigation-link {
@@ -342,7 +350,7 @@ body {
   background-color: #808080;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   position: relative;
 }
 
@@ -562,7 +570,7 @@ body {
   background-color: #4b7b91;
   background-image: url("../images/index-newsletter-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .newsletter-title {
@@ -638,6 +646,10 @@ body {
   border-radius: 0px 10px 10px 0px;
   border: none;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .newsletter-button:focus {
@@ -654,13 +666,6 @@ body {
   background-color: #68A2CA;
   color: rgba(255, 255, 255, 0.3);
   outline: none;
-}
-
-.newsletter-button-text {
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
 }
 
 .page-footer {
@@ -1201,7 +1206,7 @@ body {
   background-color: #1a4649;
   background-image: url("../images/catalog-filters-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .inner-header-title {
@@ -1644,7 +1649,7 @@ input[type=number]::-webkit-outer-spin-button {
   overflow: hidden;
   background-image: url('../images/icons/filter-arrow.svg');
   background-repeat: no-repeat;
-  background-position: 254px center;
+  background-position: 92% center;
 }
 
 .sort-select-control:focus {
@@ -2017,7 +2022,7 @@ input[type=number]::-webkit-outer-spin-button {
   overflow: hidden;
   background-image: url('../images/icons/filter-arrow.svg');
   background-repeat: no-repeat;
-  background-position: 127px center;
+  background-position: 88% center;
 }
 
 .select-control-pagination:focus {
