@@ -29,7 +29,13 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  min-width: 1200px;
   min-height: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -164,6 +170,7 @@ body {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   width: 1200px;
   margin: 0 auto;
   padding: 0 70px 0 70px;
@@ -194,6 +201,7 @@ body {
 
 .navigation-item {
   position: relative;
+  max-width: 180px;
 }
 
 .navigation-link {
@@ -207,7 +215,7 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   margin: 5px 4px 4px 4px;
-  padding: 15px 13px 15px 13px;
+  padding: 14px 13px 16px 13px;
   min-width: 18px;
   min-height: 26px;
   border-radius: 5px;
@@ -239,7 +247,7 @@ body {
   display: block;
   box-sizing: border-box;
   color: #000000;
-  margin: 13px 0 0 0;
+  margin: 12px 0 0 0;
   padding: 0;
   width: 42px;
   height: 42px;
@@ -342,7 +350,7 @@ body {
   background-color: #808080;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   position: relative;
 }
 
@@ -448,6 +456,7 @@ body {
   display: block;
   margin: 30px auto 30px auto;
   max-width: 220px;
+  text-align: center;
 }
 
 .advantages-description:last-child {
@@ -486,13 +495,13 @@ body {
 .extra-advantages-item-burger {
   background-image: url("../images/icons/index-advantages-icon-burger.svg");
   background-repeat: no-repeat;
-  background-position: 163px 89px;
+  background-position: 163px 91px;
 }
 
 .extra-advantages-item-souvenir {
   background-image: url("../images/icons/index-advantages-icon-souvenir.svg");
   background-repeat: no-repeat;
-  background-position: 163px 89px;
+  background-position: 167px 85px;
 }
 
 .photo {
@@ -511,22 +520,30 @@ body {
 }
 
 .main-page-description-search {
-  margin-bottom: 56px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 720px;
+  margin: 0 auto 56px auto;
+  color: #333333;
+  text-align: center;
 }
 
 .hotel-search {
   display: block;
+  box-sizing: border-box;
   max-width: 575px;
-  height: 60px;
+  min-height: 60px;
   margin: 0 auto;
   color: #ffffff;
   background-color: #756257;
   font-weight: 700;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 36px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
+  padding: 13px 5px 11px 5px;
 }
 
 .hotel-search:focus {
@@ -553,7 +570,7 @@ body {
   background-color: #4b7b91;
   background-image: url("../images/index-newsletter-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .newsletter-title {
@@ -599,6 +616,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.newsletter-field:disabled {
+  background-color: #9c9b9b;
+}
+
 .newsletter-field:hover {
   background-color: #e6e6e6;
   outline: none;
@@ -617,10 +638,7 @@ body {
 
 .newsletter-button {
   min-width: 200px;
-  padding: 16px 35px 16px 35px;
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 700;
+  padding: 16px 34px 16px 34px;
   text-align: center;
   color: #ffffff;
   background-color: #83B3D3;
@@ -628,6 +646,10 @@ body {
   border-radius: 0px 10px 10px 0px;
   border: none;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .newsletter-button:focus {
@@ -651,14 +673,13 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 15px 0 15px 0;
-  justify-content: space-between;
   align-items: center;
 }
 
 .footer-social {
   min-width: 120px;
   max-width: 300px;
-  margin-left: 70px;
+  margin-left: 60px;
 }
 
 .social-list {
@@ -666,12 +687,12 @@ body {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 22px;
+  margin-bottom: 28px;
 }
 
 .social-item {
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 .social-link {
@@ -727,16 +748,15 @@ body {
 
 .footer-phone-number {
   display: block;
-  min-width: 360px;
-  max-width: 720px;
+  width: 380px;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
-  margin: 0 auto;
+  margin-left: 202px;
   text-align: center;
-  padding: 15px 0 15px 0;
+  padding: 15px 20px 15px 20px;
   border-radius: 10px;
 }
 
@@ -759,7 +779,7 @@ body {
   display: block;
   min-width: 125px;
   max-width: 150px;
-  margin-right: 62px;
+  margin: 0 52px 0 auto;
 }
 
 .footer-logo {
@@ -894,6 +914,10 @@ body {
   line-height: 40px;
 }
 
+.text-field:disabled {
+  background-color: #9c9b9b;
+}
+
 .text-field:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
@@ -988,6 +1012,7 @@ body {
   padding: 0;
   color: #000000;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .icon-minus {
@@ -1007,6 +1032,7 @@ body {
   padding: 0;
   color: #000000;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .icon-plus {
@@ -1052,6 +1078,10 @@ body {
   font-family: "PT Sans" sans-serif;
   padding: 0 5px;
   text-align: center;
+}
+
+.modal-input:disabled {
+  background-color: #9c9b9b;
 }
 
 .modal-input:focus {
@@ -1176,7 +1206,7 @@ body {
   background-color: #1a4649;
   background-image: url("../images/catalog-filters-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .inner-header-title {
@@ -1414,6 +1444,10 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 14px 41px 11px 19px;
 }
 
+.range-input:disabled {
+  background-color: #9c9b9b;
+}
+
 .range-input-from {
   border: 2px solid #FFFFFF;
   border-right: 2px solid transparent;
@@ -1611,6 +1645,11 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   padding-left: 19px;
   padding-right: 35px;
+  -webkit-appearance: none;
+  overflow: hidden;
+  background-image: url('../images/icons/filter-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 92% center;
 }
 
 .sort-select-control:focus {
@@ -1979,6 +2018,11 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   padding-left: 17px;
   padding-right: 35px;
+  -webkit-appearance: none;
+  overflow: hidden;
+  background-image: url('../images/icons/filter-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 88% center;
 }
 
 .select-control-pagination:focus {
