@@ -62,13 +62,13 @@ img {
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 37px;
+  line-height: 21px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 37px;
+  min-height: 37px;
   box-sizing: border-box;
   min-width: 120px;
   max-width: 145px;
@@ -102,6 +102,8 @@ img {
   background-color: #83B3D3;
   padding-left: 10px;
   padding-right: 10px;
+  border: 1px solid #83B3D3;
+  box-sizing: border-box;
 }
 
 .hotel-card-button-favorite:focus {
@@ -226,9 +228,10 @@ img {
   position: absolute;
   height: 0;
   border-bottom: 2px solid #756257;
-  top: 64px;
+  top: 92%;
   left: 17px;
   right: 17px;
+  z-index: 1;
 }
 
 .navigation-link:focus {
@@ -1284,10 +1287,10 @@ img {
   padding: 0;
   margin: 0;
   border: none;
+  max-width: 160px;
 }
 
 .catalog-filter-group-infrastructure {
-  display: block;
   margin-right: 67px;
 }
 
@@ -1872,7 +1875,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 1055px;
   left: 73px;
   right: 72px;
-  top: 120px;
+  top: 100%;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -1926,7 +1929,7 @@ input[type=number]::-webkit-outer-spin-button {
 .catalog-pagination {
   display: flex;
   flex-wrap: wrap;
-  margin: 30px auto 73px auto;
+  margin: 30px auto 70px auto;
   padding: 0;
   max-width: 1056px;
 }
@@ -1941,7 +1944,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .pagination-item {
-  margin-right: 8px;
+  margin: 0 8px 3px 0;
 }
 
 .pagination-item:last-child {
@@ -1949,28 +1952,34 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .pagination-link {
-  display: inline-block;
-  width: 55px;
-  height: 55px;
+  display: block;
+  box-sizing: border-box;
+  min-width: 55px;
+  max-width: 110px;
+  min-height: 55px;
   color: #ffffff;
   background-color: #83B3D3;
   font-weight: 700;
   font-size: 20px;
-  line-height: 55px;
+  line-height: 26px;
+  padding: 14px 5px 15px 5px;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
 }
 
 .pagination-link-current {
-  display: inline-block;
-  width: 55px;
-  height: 55px;
+  display: block;
+  box-sizing: border-box;
+  min-width: 55px;
+  max-width: 110px;
+  min-height: 55px;
   background-color: #F2F2F2;
   color: #000000;
   font-weight: 700;
   font-size: 20px;
-  line-height: 55px;
+  line-height: 26px;
+  padding: 14px 5px 15px 5px;
   border-radius: 4px;
   text-decoration: none;
   text-align: center;
@@ -2000,14 +2009,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .inner-page-text {
   display: block;
-  margin: auto 51px auto 0;
+  margin: 15px 51px auto 0;
 }
 
 .select-control-pagination {
   width: 160px;
   height: 48px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: 3px auto auto auto;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
   font-family: inherit;
