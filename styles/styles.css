@@ -458,7 +458,7 @@ img {
 .advantages-description {
   display: block;
   margin: 30px auto 30px auto;
-  max-width: 220px;
+  width: 220px;
   text-align: center;
 }
 
