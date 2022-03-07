@@ -1079,7 +1079,7 @@ img {
   font-size: 18px;
   line-height: 50px;
   font-weight: 700;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   padding: 0 5px;
   text-align: center;
 }
@@ -1449,7 +1449,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   padding: 14px 41px 11px 17px;
 }
 
